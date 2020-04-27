@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Todoapp I created using hooks while learning redux. The tutorials out there didn't really explain how to use hooks with redux. Hope this helps others.
+
+
 
 ## Available Scripts
 
