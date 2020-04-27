@@ -12,9 +12,7 @@ const configureStore = () => {
 
   store.subscribe(
     throttle(() => {
-      saveToStorageFromState({
-        todos: store.getState().todos,
-      });
+      saveToStorageFromState(store.getState().todos || []);
     }, 1000)
   );
 
