@@ -1,6 +1,6 @@
 Todoapp I created using hooks while learning redux. The tutorials out there didn't really explain how to use hooks with redux. Hope this helps others.
 
-Added local storage to persist todo's after page refresh.
+Added localstorage to persist todo's after page refresh.
 
 
 ## Available Scripts
