@@ -5,3 +5,8 @@ export const addTodo = (text) => ({
   id: v4(),
   text,
 });
+
+export const deleteTodo = (id) => ({
+  type: "DELETE_TODO",
+  id,
+});

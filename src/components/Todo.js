@@ -6,9 +6,15 @@ import TableContainer from "@material-ui/core/TableContainer";
 import TableHead from "@material-ui/core/TableHead";
 import TableRow from "@material-ui/core/TableRow";
 import Paper from "@material-ui/core/Paper";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { deleteTodo } from "../actions";
+import { useSelector, useDispatch } from "react-redux";
+
 import "./Todo.scss";
 
 const Todo = (props) => {
+  const dispatch = useDispatch();
+
   return (
     <div className="tablebody">
       <TableContainer component={Paper}>
@@ -18,6 +24,12 @@ const Todo = (props) => {
               <TableRow key={row.text}>
                 <TableCell component="th" scope="row">
                   {row.text}
+                </TableCell>
+                <TableCell
+                  align="right"
+                  onClick={() => dispatch(deleteTodo(row.id))}
+                >
+                  <DeleteIcon />
                 </TableCell>
               </TableRow>
             ))}
